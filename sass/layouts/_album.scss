@@ -1,0 +1,116 @@
+.album_data--wrapper {
+	padding: 2rem;
+	max-width: 1400px;
+	margin: 1rem auto;
+	.band_name {
+		font-size: 3rem;
+		font-family: 'proxima-nova', sans-serif;
+		font-weight: 700;
+		border-bottom: solid thin #000;
+		line-height: 1.2;
+		color: #000;
+	}
+
+	.album_name {
+
+		span {
+			color: #000;
+			margin-right: .5rem;
+		}
+	}
+
+	.album_cover {
+		max-width: 400px;
+		width: 90%;
+		padding: .25rem;
+		border: solid thin #000;
+		margin-bottom: 1rem;
+	}
+
+	.genres {
+		margin-bottom: 1rem;
+		strong {
+			color: #000;
+			margin-right: 1rem;
+		}
+
+		.genre {
+			display: inline-block;
+			width: auto;
+			padding: .5rem 1rem;
+			background: $yellow;
+			color: #000;
+			border-radius: 4px;
+		}
+	}
+
+	.album_notes {
+		background: #eee;
+		padding:1rem;
+		&:before {
+			content: "Album Notes";
+			display: block;
+			font-size:1.2rem;
+			font-family: 'proxima-nova', sans-serif;
+			font-weight: 700;
+			color: #000;
+		}
+	}
+
+	.tracklist--wrapper  {
+
+		&:before {
+			content: "Track Listing";
+			display: block;
+			font-size:1.2rem;
+			font-family: 'proxima-nova', sans-serif;
+			font-weight: 700;
+			color:#000;
+			padding-left: 1rem;
+			padding-top: 1rem;
+		}
+		
+		li {
+			margin: 1rem;
+			border-bottom: solid thin #000;
+
+		}
+
+	}
+
+	.videos {
+		padding-top: 2rem;
+		&:before {
+			content: "Videos";
+			display: block;
+			font-size:1.2rem;
+			font-family: 'proxima-nova', sans-serif;
+			font-weight: 700;
+			color: #000;
+			margin-bottom: 1rem;
+			border-bottom: solid thin #000;
+		}
+
+		.video-wrapper {
+			position: relative;
+			padding-bottom: 56.25%; /* 16:9 */
+			padding-top: 25px;
+			height: 0;
+			width: auto;
+			height: auto;
+			margin: 1rem;
+		}
+		
+		.video-wrapper iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.album_data--back-btn.btn {
+	text-align: center;
+}

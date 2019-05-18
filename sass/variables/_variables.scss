@@ -1,0 +1,70 @@
+$yellow: #ffec00;
+$teal: #2bc19d;
+$lime: #a6ce39;
+$forrest: #18aa60;
+$white: #ffffff;
+$pink: #ea63a1;
+
+@mixin dropShadow() {
+	-webkit-box-shadow: 2px 2px 26px 4px rgba(0,0,0,0.15);
+	-moz-box-shadow: 2px 2px 26px 4px rgba(0,0,0,0.15);
+	box-shadow: 2px 2px 26px 4px rgba(0,0,0,0.15);
+}
+
+@mixin btn($bg, $radius, $color) {
+	width: auto;
+	display: inline-block;
+	color: $color;
+	padding: .5rem 1rem;
+	background: $bg;
+	transition: all .3s ease-in;
+	cursor: pointer;
+
+	&:hover {
+		background: darken($pink, 20%);
+		color: $white;
+		
+		@include dropShadow();
+		 
+		 i {
+		 	margin-right: .5rem;
+		 	margin-left: .5rem;
+		 }
+	}
+}
+
+$laptop: "(max-width:1550px)";
+$tablet-landscape: "(max-width:1100px)";
+$tablet-portrait: "(max-width:800px)";
+$mobile: "(max-width:750px)";
+$smMobile: "(max-width:450px)";
+
+@mixin laptop {
+	@media #{$laptop} {
+		@content;
+	}
+}
+
+@mixin tablet-landscape {
+	@media #{$tablet-landscape} {
+		@content;
+	}
+}
+
+@mixin tablet-portrait {
+	@media #{$tablet-portrait} {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media #{$mobile} {
+		@content;
+	}
+}
+
+@mixin smMobile {
+	@media #{$smMobile} {
+		@content;
+	}
+}
